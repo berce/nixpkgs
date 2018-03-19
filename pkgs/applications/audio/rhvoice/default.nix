@@ -3,13 +3,13 @@
 
 stdenv.mkDerivation rec {
   name = "rhvoice-${version}";
-  version = "0.5";
+  version = "0.6.unstable-2018-02-10";
 
   src = fetchFromGitHub {
     owner = "Olga-Yakovleva";
     repo = "RHVoice";
-    rev = version;
-    sha256 = "1gk5z1v7g7xg1dvc2qfa0ljgma8s96njg2k70rsnr3s1wsrgvqk7";
+    rev = "7a25a881b0465e47a12d8029b56f3b71a1d02312";
+    sha256 = "1gkrlmv7msh9qlm0gkjqpl9gswghpclfdwszr1p85v8vk6m63v0b";
   };
 
   nativeBuildInputs = [
@@ -42,7 +42,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     scons install
-  ''; 
+  '';
 
   meta = {
     description = "A free and open source speech synthesizer for Russian language and others";
